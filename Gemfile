@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 
+#LINEA AGREGADA PORQUE ESTA VERSION TRABAJA BIEN CON WINDOWS
+gem 'coffee-script-source', '1.8.0'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record

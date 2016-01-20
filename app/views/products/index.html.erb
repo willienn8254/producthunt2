@@ -1,35 +1,50 @@
-<h1>Productos</h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
 
 
-<table>
+				<h1>Productos</h1>
+
+
+					<table class="table">
 	
-	<tr>
-		<th>Id</th>
-		<th>Nombre</th>
-		<th>Url</th>
-		<th>Descripcion</th>
+						<tr>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Url</th>
+							<th>Descripcion</th>
+						</tr>
 
+						<% @products.each do |product| %>
 
-	</tr>
+						<tr>
 
-	<% @products.each do |product| %>
+							<td><%=product.id %></td>
+							<td><%=product.name %></td>
+							<td><%=product.url %></td>
+							<td><%=product.description %></td>
+							
 
-	<tr>
-
-		<td><%=product.id %></td>
-		<td><%=product.name %></td>
-		<td><%=product.url %></td>
-		<td><%=product.description %></td>
-		
-
-
-
-
-	</tr>
+						</tr>
 
 
 
-	<% end %>
+						<% end %>
 
 
-</table>
+					</table>
+			
+
+
+		</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+

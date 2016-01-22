@@ -6,10 +6,11 @@
 
 				<h1>Productos</h1>
 
-
+				<% if signed_in? %>
 					<div class="text-right">
 						<%= link_to "Publicar producto", new_product_path, class: "btn btn-primary"	%>
 					</div>
+				<% end %>
 					<table class="table">
 	
 						<tr>
@@ -29,9 +30,11 @@
 							<td><%=product.url %></td>
 							<td><%=product.description %></td>
 							<td>
+
+								<% if signed_in? %>
 								<%= link_to "Editar", edit_product_path(product) %> 
 								<%= link_to "Eliminar", product, method: :delete, data:{ confirm: "Estas seguro de eliminar este producto"} %> 
-
+								<% end %>
 
 							</td>
 							

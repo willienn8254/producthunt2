@@ -1,14 +1,15 @@
 # == Schema Information
 #
-# Table name: comments
+# Table name: votes
 #
 #  id         :integer          not null, primary key
-#  body       :text
 #  product_id :integer
 #  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-module CommentsHelper
+class Vote < ActiveRecord::Base
+  belongs_to :product
+  belongs_to :user
 end

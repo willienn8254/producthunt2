@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #delete 'products/:id', to: 'products#destroy'
 
    resources :products do
+      resource :vote, only: [:create, :destroy]
       resources :comments, only: [:create]
   end
   root 'products#index'

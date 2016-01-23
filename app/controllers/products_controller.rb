@@ -2,13 +2,17 @@
 #
 # Table name: products
 #
-#  id          :integer          not null, primary key
-#  name        :string
-#  url         :string
-#  description :text
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  user_id     :integer
+#  id                 :integer          not null, primary key
+#  name               :string
+#  url                :string
+#  description        :text
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  user_id            :integer
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 
 class ProductsController < ApplicationController
@@ -92,9 +96,8 @@ class ProductsController < ApplicationController
 
 	private
 	def product_params
-		params.require(:product).permit(:name, :url, :description)
-
-	end
+  params.require(:product).permit(:name, :url, :description, :image)
+end
 
 
 
